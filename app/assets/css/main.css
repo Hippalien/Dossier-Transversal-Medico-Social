@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --color-famille-500: #D946EF;
+  --color-famille-600: #C026D3;
+  
+  --color-sante-500: #F43F5E;
+  --color-admin-500: #3B82F6;
+  --color-educ-500: #10B981;
+  --color-fuchsia-500: #D946EF;
+
+  --font-sans: 'Public Sans', sans-serif;
+}

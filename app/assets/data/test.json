@@ -1,0 +1,412 @@
+{
+    "id": "USG-2018-001",
+    "profil": {
+      "nom": "Durand",
+      "prenom": "Sophie",
+      "dateNaissance": "2005-03-15",
+      "sexe": "F",
+      "numeroSecu": "2 05 03 75 123 456 78",
+      "allergies": [
+        "Arachides",
+        "Pénicilline"
+      ],
+      "regimeAlimentaire": "Végétarien",
+      "modesCommunication": [
+        "Verbal",
+        "MAKATON",
+        "Pictogrammes"
+      ],
+      "handicaps": [
+        "TSA (Trouble du Spectre Autistique)",
+        "Déficience intellectuelle légère"
+      ],
+      "referentLegal": {
+        "nom": "Durand",
+        "prenom": "Marie",
+        "lien": "Mère",
+        "telephone": "06 12 34 56 78",
+        "email": "marie.durand@email.fr"
+      }
+    },
+    "parcours": [
+      {
+        "id": "evt-001",
+        "date": "2018-09-01",
+        "type": "Administratif",
+        "titre": "Notification MDPH",
+        "description": "Reconnaissance de handicap - Orientation SESSAD",
+        "structure": "MDPH Paris",
+        "auteur": "Commission des Droits et de l'Autonomie",
+        "documents": [
+          "Notification MDPH",
+          "Plan Personnalisé de Compensation"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-002",
+        "date": "2018-09-15",
+        "type": "Éducatif",
+        "titre": "Entrée SESSAD Les Hirondelles",
+        "description": "Début accompagnement SESSAD - Mise en place PPA",
+        "structure": "SESSAD Les Hirondelles",
+        "auteur": "Mme Laurent - Éducatrice spécialisée",
+        "documents": [
+          "Contrat de séjour",
+          "Projet Personnalisé d'Accompagnement"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-003",
+        "date": "2019-01-10",
+        "type": "Santé",
+        "titre": "Bilan psychologique",
+        "description": "QI Verbal: 65, QI Performance: 58 - Déficience intellectuelle légère confirmée",
+        "structure": "SESSAD Les Hirondelles",
+        "auteur": "Dr. Martin - Psychologue",
+        "documents": [
+          "Compte-rendu bilan psychologique WISC-V"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-004",
+        "date": "2019-03-22",
+        "type": "Éducatif",
+        "titre": "Mise en place AVS-I",
+        "description": "Auxiliaire de Vie Scolaire Individuelle 24h/semaine",
+        "structure": "Collège Victor Hugo",
+        "auteur": "Équipe de Suivi de Scolarisation",
+        "documents": [
+          "Décision d'attribution AVS",
+          "Compte-rendu ESS"
+        ],
+        "importance": "moyenne"
+      },
+      {
+        "id": "evt-005",
+        "date": "2019-11-05",
+        "type": "Santé",
+        "titre": "Consultation pédopsychiatrie",
+        "description": "Ajustement traitement anxiolytique - Risperidone 0.5mg",
+        "structure": "CMP Enfants Paris 15",
+        "auteur": "Dr. Lefebvre - Pédopsychiatre",
+        "documents": [
+          "Ordonnance médicale",
+          "Compte-rendu consultation"
+        ],
+        "importance": "moyenne"
+      },
+      {
+        "id": "evt-006",
+        "date": "2020-02-18",
+        "type": "Éducatif",
+        "titre": "Synthèse annuelle SESSAD",
+        "description": "Bonne évolution. Progrès en autonomie et communication",
+        "structure": "SESSAD Les Hirondelles",
+        "auteur": "Équipe pluridisciplinaire",
+        "documents": [
+          "Synthèse annuelle",
+          "Objectifs 2020"
+        ],
+        "importance": "moyenne"
+      },
+      {
+        "id": "evt-007",
+        "date": "2020-06-01",
+        "type": "Administratif",
+        "titre": "Renouvellement notification MDPH",
+        "description": "Renouvellement orientation SESSAD jusqu'en 2023",
+        "structure": "MDPH Paris",
+        "auteur": "Commission des Droits et de l'Autonomie",
+        "documents": [
+          "Notification MDPH renouvellement"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-008",
+        "date": "2021-04-15",
+        "type": "Santé",
+        "titre": "Hospitalisation en urgence",
+        "description": "Crise d'angoisse sévère - Hospitalisation 3 jours",
+        "structure": "CHU Necker",
+        "auteur": "Dr. Roussel - Urgences pédiatriques",
+        "documents": [
+          "Compte-rendu hospitalisation",
+          "Lettre de sortie"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-009",
+        "date": "2021-05-20",
+        "type": "Éducatif",
+        "titre": "Réunion de crise",
+        "description": "Difficultés scolaires importantes. Proposition d'orientation ULIS",
+        "structure": "Collège Victor Hugo",
+        "auteur": "Équipe de Suivi de Scolarisation",
+        "documents": [
+          "Compte-rendu ESS",
+          "Proposition orientation ULIS"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-010",
+        "date": "2021-09-01",
+        "type": "Éducatif",
+        "titre": "Intégration ULIS",
+        "description": "Entrée dispositif ULIS TSA - Inclusion partielle",
+        "structure": "Collège Simone de Beauvoir",
+        "auteur": "Mme Petit - Coordinatrice ULIS",
+        "documents": [
+          "Projet Personnalisé de Scolarisation"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-011",
+        "date": "2022-01-12",
+        "type": "Santé",
+        "titre": "Bilan orthophonique",
+        "description": "Progrès en langage pragmatique. Poursuite séances 2x/semaine",
+        "structure": "Cabinet Mme Girard",
+        "auteur": "Mme Girard - Orthophoniste",
+        "documents": [
+          "Bilan orthophonique 2022"
+        ],
+        "importance": "basse"
+      },
+      {
+        "id": "evt-012",
+        "date": "2022-09-05",
+        "type": "Éducatif",
+        "titre": "Fin accompagnement SESSAD",
+        "description": "Âge limite atteint. Orientation vers SAVS recommandée",
+        "structure": "SESSAD Les Hirondelles",
+        "auteur": "Mme Laurent - Éducatrice spécialisée",
+        "documents": [
+          "Synthèse de fin de parcours",
+          "Recommandations"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-013",
+        "date": "2022-10-01",
+        "type": "Administratif",
+        "titre": "Nouvelle notification MDPH",
+        "description": "Orientation SAVS + AAH à taux plein + Carte Mobilité Inclusion",
+        "structure": "MDPH Paris",
+        "auteur": "Commission des Droits et de l'Autonomie",
+        "documents": [
+          "Notification MDPH adulte",
+          "Décision AAH",
+          "CMI"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-014",
+        "date": "2023-01-15",
+        "type": "Éducatif",
+        "titre": "Entrée SAVS Autonomie",
+        "description": "Début accompagnement SAVS - Objectif insertion professionnelle",
+        "structure": "SAVS Autonomie Paris",
+        "auteur": "M. Dubois - Chef de service",
+        "documents": [
+          "Contrat de séjour SAVS",
+          "Projet Personnalisé"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-015",
+        "date": "2023-06-01",
+        "type": "Éducatif",
+        "titre": "Stage en ESAT",
+        "description": "Stage découverte ESAT - Atelier conditionnement",
+        "structure": "ESAT Les Ateliers",
+        "auteur": "Mme Chevalier - Monitrice d'atelier",
+        "documents": [
+          "Convention de stage",
+          "Évaluation stage"
+        ],
+        "importance": "moyenne"
+      },
+      {
+        "id": "evt-016",
+        "date": "2023-12-10",
+        "type": "Santé",
+        "titre": "Bilan psychiatrique annuel",
+        "description": "État stabilisé. Poursuite traitement. Autonomie en progrès",
+        "structure": "CMP Adultes Paris",
+        "auteur": "Dr. Moreau - Psychiatre",
+        "documents": [
+          "Compte-rendu consultation psychiatrie"
+        ],
+        "importance": "moyenne"
+      },
+      {
+        "id": "evt-017",
+        "date": "2024-02-01",
+        "type": "Éducatif",
+        "titre": "Admission ESAT",
+        "description": "Admission définitive ESAT - CDI d'insertion",
+        "structure": "ESAT Les Ateliers",
+        "auteur": "M. Blanchard - Directeur ESAT",
+        "documents": [
+          "Contrat de soutien et d'aide par le travail"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-018",
+        "date": "2024-05-15",
+        "type": "Administratif",
+        "titre": "Demande logement autonome",
+        "description": "Constitution dossier logement social - Demande studio adapté",
+        "structure": "SAVS Autonomie Paris",
+        "auteur": "Mme Bernard - Assistante sociale",
+        "documents": [
+          "Dossier logement social"
+        ],
+        "importance": "moyenne"
+      },
+      {
+        "id": "evt-019",
+        "date": "2024-11-20",
+        "type": "Éducatif",
+        "titre": "Synthèse annuelle SAVS",
+        "description": "Excellente évolution. Autonomie quotidienne acquise. Poursuite accompagnement allégé",
+        "structure": "SAVS Autonomie Paris",
+        "auteur": "Équipe pluridisciplinaire",
+        "documents": [
+          "Synthèse annuelle 2024",
+          "Nouveau projet personnalisé"
+        ],
+        "importance": "moyenne"
+      },
+      {
+        "id": "evt-020",
+        "date": "2025-03-01",
+        "type": "Administratif",
+        "titre": "Attribution logement",
+        "description": "Studio adapté attribué - Quartier Belleville",
+        "structure": "Paris Habitat",
+        "auteur": "Service attribution",
+        "documents": [
+          "Bail logement social"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-021",
+        "date": "2025-04-15",
+        "type": "Éducatif",
+        "titre": "Installation logement autonome",
+        "description": "Emménagement réussi. Mise en place aide ménagère 4h/semaine",
+        "structure": "SAVS Autonomie Paris",
+        "auteur": "M. Dubois - Chef de service",
+        "documents": [
+          "Protocole autonomie à domicile"
+        ],
+        "importance": "haute"
+      },
+      {
+        "id": "evt-022",
+        "date": "2025-09-10",
+        "type": "Santé",
+        "titre": "Consultation endocrinologie",
+        "description": "Prise de poids liée au traitement. Mise en place suivi nutritionnel",
+        "structure": "Hôpital Saint-Louis",
+        "auteur": "Dr. Chen - Endocrinologue",
+        "documents": [
+          "Ordonnance",
+          "Plan nutritionnel"
+        ],
+        "importance": "basse"
+      },
+      {
+        "id": "evt-023",
+        "date": "2026-01-08",
+        "type": "Éducatif",
+        "titre": "Évaluation compétences professionnelles",
+        "description": "Montée en compétences remarquable. Proposition passage atelier emballage complexe",
+        "structure": "ESAT Les Ateliers",
+        "auteur": "Mme Chevalier - Monitrice d'atelier",
+        "documents": [
+          "Grille d'évaluation professionnelle"
+        ],
+        "importance": "moyenne"
+      }
+    ],
+    "partagesActifs": [
+      {
+        "id": "share-001",
+        "structure": "SAVS Autonomie Paris",
+        "professionnel": "M. Dubois - Chef de service",
+        "email": "j.dubois@savs-autonomie.fr",
+        "dateDebut": "2023-01-15",
+        "dateFin": null,
+        "niveauAcces": "Complet",
+        "permissions": [
+          "lecture",
+          "ecriture",
+          "ajoutDocument"
+        ]
+      },
+      {
+        "id": "share-002",
+        "structure": "ESAT Les Ateliers",
+        "professionnel": "Mme Chevalier - Monitrice",
+        "email": "m.chevalier@esat-ateliers.fr",
+        "dateDebut": "2024-02-01",
+        "dateFin": null,
+        "niveauAcces": "Partiel",
+        "permissions": [
+          "lecture"
+        ]
+      },
+      {
+        "id": "share-003",
+        "structure": "CMP Adultes Paris",
+        "professionnel": "Dr. Moreau - Psychiatre",
+        "email": "p.moreau@cmp-paris.fr",
+        "dateDebut": "2022-10-01",
+        "dateFin": null,
+        "niveauAcces": "Santé uniquement",
+        "permissions": [
+          "lecture"
+        ]
+      }
+    ],
+    "historiquePartages": [
+      {
+        "id": "share-hist-001",
+        "structure": "SESSAD Les Hirondelles",
+        "professionnel": "Mme Laurent - Éducatrice",
+        "dateDebut": "2018-09-15",
+        "dateFin": "2022-09-05",
+        "niveauAcces": "Complet"
+      },
+      {
+        "id": "share-hist-002",
+        "structure": "Collège Victor Hugo",
+        "professionnel": "Équipe pédagogique",
+        "dateDebut": "2019-03-22",
+        "dateFin": "2021-09-01",
+        "niveauAcces": "Éducatif uniquement"
+      }
+    ],
+    "metadata": {
+      "version": "1.0",
+      "derniereModification": "2026-02-13T10:30:00Z",
+      "creePar": "Système Interopérable Médico-Social",
+      "standardFHIR": "R4",
+      "consentementUsager": true,
+      "consentementDate": "2023-01-15"
+    }
+  }
