@@ -7,28 +7,28 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxtjs/supabase',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
   ],
 
   css: ['~/assets/css/main.css'],
-  
+
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
-    supabase: {
-      redirect: false
-    },
+  supabase: {
+    redirect: false,
+  },
 
   routeRules: {
-    '/': { prerender: true }
+    '/': { prerender: true },
   },
 
   compatibilityDate: '2025-01-15',
 
   eslint: {
     config: {
-      standalone: false
-    }
-  }
+      standalone: false,
+    },
+  },
 })

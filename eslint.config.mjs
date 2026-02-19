@@ -7,10 +7,10 @@ export default withNuxt(
     // Options Antfu
     vue: true,
     typescript: true,
-    formatters: true, 
+    formatters: true,
     stylistic: {
       indent: 2,
       quotes: 'single',
-    }
-  })
+    },
+  }),
 )

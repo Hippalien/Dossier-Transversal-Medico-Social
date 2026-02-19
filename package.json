@@ -1,7 +1,8 @@
 {
   "name": "mon-dossier-transversal",
-  "private": true,
   "type": "module",
+  "private": true,
+  "packageManager": "pnpm@10.29.2",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,9 +12,9 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.2.0",
     "@iconify-json/lucide": "^1.2.89",
     "@iconify-json/simple-icons": "^1.2.70",
-    "@heroicons/vue": "^2.2.0",
     "@nuxt/ui": "^4.4.0",
     "@nuxtjs/supabase": "2.0.3",
     "@nuxtjs/tailwindcss": "6.14.0",
@@ -28,8 +29,8 @@
     "@antfu/eslint-config": "^7.4.3",
     "@nuxt/eslint": "^1.14.0",
     "eslint": "^10.0.0",
+    "eslint-plugin-format": "^1.4.0",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.4"
-  },
-  "packageManager": "pnpm@10.29.2"
+  }
 }
