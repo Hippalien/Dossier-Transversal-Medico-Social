@@ -5,19 +5,17 @@ const items = ref<TabsItem[]>([
   {
     label: 'Fil de vie',
     icon: 'i-lucide-activity',
-    content: 'This is the "Fil de vie" content.',
-
+    slot: 'timeline' as const,
   },
   {
     label: 'Profil Interopérable',
     icon: 'i-lucide-user',
-    content: 'This is the "Profil" content.',
-
+    slot: 'profile' as const,
   },
   {
     label: 'Partages & Permissions',
     icon: 'i-lucide-share-2',
-    content: 'This is the "Partage & Permissions" content..',
+    slot: 'permissions' as const,
 
   },
 ])
@@ -25,10 +23,22 @@ const items = ref<TabsItem[]>([
 
 <template>
   <UTabs
-    size="md"
-    color="info"
+    size="lg"
+    color="secondary"
     variant="link"
     :items="items"
     class="w-full"
-  />
+  >
+    <template #timeline>
+      <TimelineTab />
+    </template>
+
+    <template #profile>
+      <ProfileTab />
+    </template>
+
+    <template #permissions>
+      <PermissionsTab />
+    </template>
+  </UTabs>
 </template>
