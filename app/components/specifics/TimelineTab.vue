@@ -14,7 +14,7 @@ const statCards = ref<StatElement[]>([
 ])
 </script>
 
-<template class="p-2">
+<template>
   <div class="p-2">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       <AppStatCard

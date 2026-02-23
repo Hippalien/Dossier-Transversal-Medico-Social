@@ -28,17 +28,30 @@ const items = ref<TabsItem[]>([
     variant="link"
     :items="items"
     class="w-full"
+    :ui="{ root: 'gap-0 my-0', list: 'px-24' }"
   >
     <template #timeline>
-      <TimelineTab />
+      <div class="bg-slate-100">
+        <div class="px-24">
+          <TimelineTab />
+        </div>
+      </div>
     </template>
 
     <template #profile>
-      <ProfileTab />
+      <div class="bg-slate-100">
+        <div class="px-24">
+          <ProfileTab />
+        </div>
+      </div>
     </template>
 
     <template #permissions>
-      <PermissionsTab />
+      <div class="bg-slate-100">
+        <div class="px-24">
+          <PermissionsTab />
+        </div>
+      </div>
     </template>
   </UTabs>
 </template>

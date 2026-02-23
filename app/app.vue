@@ -6,10 +6,11 @@ const userName = ref<string>('')
 </script>
 
 <template>
-  <header class="border-b border-gray-200 bg-white sticky top-2 z-10 w-full px-24 ">
+  <header class="border-b border-gray-200 bg-white sticky top-0 z-10 w-full px-24">
     <NavBar :user-name="userName" />
-    <Tabs />
   </header>
+
+  <Tabs class="w-full" />
 
   <NuxtPage />
 </template>

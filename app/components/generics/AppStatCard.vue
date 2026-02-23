@@ -12,7 +12,7 @@ defineProps<{
 </script>
 
 <template>
-  <UCard class="h-full" :ui="{ body: { base: 'h-full flex flex-col justify-center shadow-xl' } }">
+  <UCard class="h-full" :ui="{ body: 'h-full flex flex-col justify-center shadow-xl' }">
     <div class="flex justify-between items-center w-full">
       <div class="flex flex-col">
         <span class="text-sm text-gray-500 dark:text-gray-400">{{ item.label }}</span>
