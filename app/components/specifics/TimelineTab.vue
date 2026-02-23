@@ -25,5 +25,6 @@ const statCards = ref<StatElement[]>([
     </div>
 
     <TimelineFilters class="mt-6" />
+    <EventList />
   </div>
 </template>
