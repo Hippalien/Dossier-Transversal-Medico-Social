@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { getCategoryStyle } from '~/stores/data.store'
+
+const { dossier } = useDataStore()
+
 interface StatElement {
   label: string
   value: number
@@ -6,12 +10,15 @@ interface StatElement {
   color: string
 }
 
-const statCards = ref<StatElement[]>([
-  { label: 'Total évènements', value: 23, icon: 'i-heroicons-calendar', color: 'text-black' },
-  { label: 'Santé', value: 6, icon: 'i-heroicons-exclamation-circle', color: 'text-red-500' },
-  { label: 'Administratif', value: 5, icon: 'i-heroicons-document-text', color: 'text-blue-500' },
-  { label: 'Educatif', value: 12, icon: 'i-heroicons-building-office-2', color: 'text-green-500' },
-])
+const statCards = computed<StatElement[]>(() => {
+  const parcours = dossier.parcours
+  return [
+    { label: 'Total évènements', value: parcours.length, icon: 'i-heroicons-calendar', color: 'text-black' },
+    { label: 'Santé', value: parcours.filter(e => e.type === 'Santé').length, icon: 'i-heroicons-exclamation-circle', color: getCategoryStyle('Santé').text },
+    { label: 'Administratif', value: parcours.filter(e => e.type === 'Administratif').length, icon: 'i-heroicons-document-text', color: getCategoryStyle('Administratif').text },
+    { label: 'Educatif', value: parcours.filter(e => e.type === 'Éducatif').length, icon: 'i-heroicons-building-office-2', color: getCategoryStyle('Éducatif').text },
+  ]
+})
 </script>
 
 <template>
@@ -25,6 +32,7 @@ const statCards = ref<StatElement[]>([
     </div>
 
     <TimelineFilters class="mt-6" />
+
     <EventList />
   </div>
 </template>
