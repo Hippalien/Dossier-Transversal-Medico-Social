@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import initialData from '~/assets/data/test.json'
 
 interface CategoryStyle {
+  bg: string
   text: string
   dot: string
   border: string
@@ -10,13 +11,13 @@ interface CategoryStyle {
 }
 
 const categoryStyles: Record<CategorieEvenement, CategoryStyle> = {
-  Administratif: { text: 'text-blue-500', dot: 'bg-blue-500', border: 'border-blue-500', badge: 'bg-blue-100 text-blue-700' },
-  Éducatif: { text: 'text-green-500', dot: 'bg-green-500', border: 'border-green-500', badge: 'bg-green-100 text-green-700' },
-  Santé: { text: 'text-red-500', dot: 'bg-red-500', border: 'border-red-500', badge: 'bg-red-100 text-red-700' },
-  Famille: { text: 'text-amber-500', dot: 'bg-amber-500', border: 'border-amber-500', badge: 'bg-amber-100 text-amber-700' },
+  Administratif: { bg: 'bg-blue-500', text: 'text-blue-500', dot: 'bg-blue-500', border: 'border-blue-500', badge: 'bg-blue-100 text-blue-700' },
+  Éducatif: { bg: 'bg-green-500', text: 'text-green-500', dot: 'bg-green-500', border: 'border-green-500', badge: 'bg-green-100 text-green-700' },
+  Santé: { bg: 'bg-red-500', text: 'text-red-500', dot: 'bg-red-500', border: 'border-red-500', badge: 'bg-red-100 text-red-700' },
+  Famille: { bg: 'bg-amber-500', text: 'text-amber-500', dot: 'bg-amber-500', border: 'border-amber-500', badge: 'bg-amber-100 text-amber-700' },
 }
 
-const defaultStyle: CategoryStyle = { text: 'text-gray-500', dot: 'bg-gray-400', border: 'border-gray-300', badge: 'bg-gray-100 text-gray-700' }
+const defaultStyle: CategoryStyle = { bg: 'bg-gray-800', text: 'text-gray-500', dot: 'bg-gray-400', border: 'border-gray-300', badge: 'bg-gray-100 text-gray-700' }
 
 export function getCategoryStyle(type: CategorieEvenement): CategoryStyle {
   return categoryStyles[type] ?? defaultStyle
@@ -34,6 +35,17 @@ export function getImportanceBorder(importance: Importance): string {
 
 export const useDataStore = defineStore('data', () => {
   const dossier = ref<DossierComplet>(initialData as DossierComplet)
+
+  const activeFilter = ref<CategorieEvenement | null>(null)
+
+  const filteredParcours = computed(() => {
+    if (!activeFilter.value) return dossier.value.parcours
+    return dossier.value.parcours.filter(e => e.type === activeFilter.value)
+  })
+
+  function setFilter(type: CategorieEvenement | null) {
+    activeFilter.value = activeFilter.value === type ? null : type
+  }
 
   async function addEvent(newEvent: Omit<Evenement, 'id'>) {
     const eventWithId = {
@@ -58,6 +70,9 @@ export const useDataStore = defineStore('data', () => {
 
   return {
     dossier,
+    activeFilter,
+    filteredParcours,
+    setFilter,
     addEvent,
     exportData,
   }

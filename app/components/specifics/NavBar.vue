@@ -11,7 +11,7 @@ const userFullName = computed(() => {
 <template>
   <nav class="flex items-center justify-between py-2 bg-white">
     <div class="flex items-center gap-2">
-      <UAvatar class="m-2 rounded-md" src="https://github.com/benjamincanac.png" size="xl" />
+      <UAvatar class="m-2 rounded-md" src="https://pic.clubic.com/v1/images/2165707/raw?fit=smartCrop&width=1600&height=1068&hash=23679cb003728bda3defc434b454861b7f1d05df" size="xl" />
 
       <div class="flex flex-col">
         <p class="font-bold text-xl text-gray-900 leading-tight">

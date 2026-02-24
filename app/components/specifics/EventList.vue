@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { getCategoryStyle } from '~/stores/data.store'
 
-const { dossier } = useDataStore()
+const store = useDataStore()
+const { dossier, filteredParcours } = storeToRefs(store)
 </script>
 
 <template>
@@ -11,7 +12,7 @@ const { dossier } = useDataStore()
     </p>
 
     <div class="flex flex-col">
-      <div v-for="event in dossier.parcours" :key="event.id" class="flex gap-4">
+      <div v-for="event in filteredParcours" :key="event.id" class="flex gap-4">
         <div class="flex flex-col items-center">
           <div class="w-4 h-4 rounded-full shrink-0 mt-1 border-2 border-gray-300 bg-white flex items-center justify-center">
             <div class="w-2 h-2 rounded-full" :class="getCategoryStyle(event.type).dot" />
