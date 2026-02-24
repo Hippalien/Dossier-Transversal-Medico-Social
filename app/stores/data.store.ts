@@ -39,7 +39,8 @@ export const useDataStore = defineStore('data', () => {
   const activeFilter = ref<CategorieEvenement | null>(null)
 
   const filteredParcours = computed(() => {
-    if (!activeFilter.value) return dossier.value.parcours
+    if (!activeFilter.value)
+      return dossier.value.parcours
     return dossier.value.parcours.filter(e => e.type === activeFilter.value)
   })
 

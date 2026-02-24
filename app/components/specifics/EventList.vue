@@ -19,8 +19,10 @@ const { dossier, filteredParcours } = storeToRefs(store)
           </div>
           <div class="w-0.5 flex-1 bg-gray-300" />
         </div>
-        <div class="pb-6 flex-1">
-          <AppEventTile :content="event" />
+        <div class="pb-6 flex-1 cursor-pointer">
+          <AppModal :content="event">
+            <AppEventTile :content="event" />
+          </AppModal>
         </div>
       </div>
     </div>
