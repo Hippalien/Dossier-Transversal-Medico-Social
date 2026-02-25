@@ -2,13 +2,13 @@
 import { getCategoryStyle } from '~/stores/data.store'
 
 const store = useDataStore()
-const { dossier, filteredParcours } = storeToRefs(store)
+const { filteredParcours, activeFilter } = storeToRefs(store)
 </script>
 
 <template>
   <div class="flex flex-col border border-gray-200 shadow-md w-full h-fit rounded-xl bg-white p-4 gap-4 mt-6">
     <p class="font-bold text-black text-lg">
-      Parcours de vie - {{ dossier.parcours.length }} évènements
+      {{ activeFilter ?? 'Parcours de vie' }} - {{ filteredParcours.length }} évènements
     </p>
 
     <div class="flex flex-col">
@@ -20,9 +20,9 @@ const { dossier, filteredParcours } = storeToRefs(store)
           <div class="w-0.5 flex-1 bg-gray-300" />
         </div>
         <div class="pb-6 flex-1 cursor-pointer">
-          <AppModal :content="event">
+          <AppEventModal :content="event">
             <AppEventTile :content="event" />
-          </AppModal>
+          </AppEventModal>
         </div>
       </div>
     </div>

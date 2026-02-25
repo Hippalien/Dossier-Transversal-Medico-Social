@@ -25,9 +25,16 @@ const userFullName = computed(() => {
 
     <ul class="flex items-center gap-1.5">
       <li>
-        <AppButton size="sm" icon="i-heroicons-qr-code">
-          QR Code
-        </AppButton>
+        <AppToast
+          title="Fonctionnalité QR Code - À venir"
+          description="Le QR Code permettra un accès rapide et sécurisé au dossier."
+          icon="i-heroicons-information-circle"
+          color="neutral"
+        >
+          <AppButton size="sm" icon="i-heroicons-qr-code">
+            QR Code
+          </AppButton>
+        </AppToast>
       </li>
       <li>
         <AppButton size="sm" icon="i-heroicons-arrow-down-tray">
