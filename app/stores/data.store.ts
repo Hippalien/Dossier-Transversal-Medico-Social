@@ -17,7 +17,7 @@ const categoryStyles: Record<CategorieEvenement, CategoryStyle> = {
   Famille: { bg: 'bg-amber-500', text: 'text-amber-500', dot: 'bg-amber-500', border: 'border-amber-500', badge: 'bg-amber-100 text-amber-700' },
 }
 
-const defaultStyle: CategoryStyle = { bg: 'bg-gray-800', text: 'text-gray-500', dot: 'bg-gray-400', border: 'border-gray-300', badge: 'bg-gray-100 text-gray-700' }
+export const defaultStyle: CategoryStyle = { bg: 'bg-transparent', text: 'text-white', dot: 'bg-gray-400', border: 'border-white', badge: 'bg-white/15 text-white border border-white/40' }
 
 export function getCategoryStyle(type: CategorieEvenement): CategoryStyle {
   return categoryStyles[type] ?? defaultStyle

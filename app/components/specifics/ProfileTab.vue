@@ -2,9 +2,7 @@
 </script>
 
 <template>
-  <div>
-    <p>
-      ici le profil
-    </p>
+  <div class="flex">
+    <AppBannerProfil />
   </div>
 </template>
