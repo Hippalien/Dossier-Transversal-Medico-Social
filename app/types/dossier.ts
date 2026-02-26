@@ -47,6 +47,7 @@ export interface DossierComplet {
   profil: ProfilUsager
   parcours: Evenement[]
   partagesActifs: PartageActif[]
+  historiquePartages: { id: string; structure: string; professionnel: string; dateDebut: string; dateFin: string; niveauAcces: string }[]
   metadata: {
     version: string
     derniereModification: string
