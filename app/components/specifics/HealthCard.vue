@@ -21,7 +21,7 @@ const food = computed (() => profil.value.regimeAlimentaire)
       <UIcon name="i-heroicons-heart" class="w-5 h-5 text-red-500" />
     </template>
     <div class="flex flex-col">
-      <p class="flex">
+      <p class="flex items-center gap-2 mb-2">
         <ShieldExclamationIcon class="w-4 h-4 text-red-500" />
         Allergies
       </p>
@@ -32,18 +32,18 @@ const food = computed (() => profil.value.regimeAlimentaire)
       </div>
     </div>
     <div>
-      <p class="flex">
+      <p class="flex items-center gap-2 mb-2">
         <UIcon name="i-lucide-utensils" class="w-4 h-4 text-green-500" />
         Régime alimentaire
       </p>
       <span class="rounded-lg px-2 py-0.5 text-xs font-semibold" :class="foodStyle.badge">{{ food }}</span>
     </div>
     <div class="flex flex-col">
-      <p class="flex">
+      <p class="flex items-center gap-2 mb-2">
         <HeartIcon class="w-4 h-4 text-purple-500" />
         Handicap
       </p>
-      <span v-for="item in handicaps" :key="item" class="flex flex-col">
+      <span v-for="item in handicaps" :key="item" class="flex flex-col text-sm">
         • {{ item }}
       </span>
     </div>

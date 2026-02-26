@@ -14,7 +14,7 @@ const styles = getCategoryStyle('Administratif')
       />
     </template>
     <div>
-      <p>
+      <p class="mb-2 text-sm">
         Supports de communication utilisés par l'usager:
       </p>
       <div class="flex flex-wrap gap-1">
