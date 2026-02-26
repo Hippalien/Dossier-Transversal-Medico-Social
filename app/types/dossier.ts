@@ -50,7 +50,9 @@ export interface DossierComplet {
   metadata: {
     version: string
     derniereModification: string
+    creePar: string
     standardFHIR: string
     consentementUsager: boolean
+    consentementDate: string
   }
 }
