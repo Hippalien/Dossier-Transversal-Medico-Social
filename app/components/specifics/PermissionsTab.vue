@@ -10,6 +10,8 @@ interface StatElement {
   color: string
 }
 
+const showAccessForm = ref(false)
+
 const statCardsPermissions = computed<StatElement[]>(() => {
   const historiquePartages = dossier.historiquePartages
 
@@ -23,12 +25,21 @@ const statCardsPermissions = computed<StatElement[]>(() => {
 
 <template>
   <div class="w-full h-full p-4 flex flex-col">
-    <h3 class="text-2xl font-bold text-gray-800">
-      Gestion des Partages
-    </h3>
-    <p class="text-gray-600">
-      Contrôlez qui a accès au dossier de {{ profil.prenom }}  {{ profil.nom }}
-    </p>
+    <div class="flex justify-between items-center">
+      <div>
+        <h3 class="text-2xl font-bold text-gray-800">
+          Gestion des Partages
+        </h3>
+        <p class="text-gray-600">
+          Contrôlez qui a accès au dossier de {{ profil.prenom }}  {{ profil.nom }}
+        </p>
+      </div>
+
+      <AppButton type="button" size="md" icon="i-heroicons-plus" class="bg-black text-white h-10 hover:bg-black/80" @click="showAccessForm = true">
+        Nouveau partage
+      </AppButton>
+    </div>
+
     <div class="grid grid-cols-3 w-full justify-between gap-4 my-4">
       <AppStatCard
         v-for="card in statCardsPermissions"
@@ -37,5 +48,11 @@ const statCardsPermissions = computed<StatElement[]>(() => {
       />
     </div>
     <ActiveShareCard />
+
+    <UModal v-model:open="showAccessForm">
+      <template #content>
+        <AccessForm @close="showAccessForm = false" />
+      </template>
+    </UModal>
   </div>
 </template>

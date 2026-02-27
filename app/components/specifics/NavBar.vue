@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import AppButton from '../generics/AppButton.vue'
-
 const dataStore = useDataStore()
 const userFullName = computed(() => {
   const profil = dataStore.dossier.profil
