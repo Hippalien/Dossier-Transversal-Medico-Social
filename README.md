@@ -1,60 +1,51 @@
-# Nuxt Starter Template
+# Dossier Transversal Médico-Social (User-Centric Portfolio)
 
-[![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+[![Deploy with Vercel](https://vercel.com/button)]
+(https://vercel.com/new/clone?repository-url=https://github.com/Hippalien/Dossier-Transversal-Medico-Social)
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+Ce projet est une proposition concrète de **Dossier Numérique Transversal** pour le secteur médico-social. Né d'une problématique identifiée lors de mon mémoire de fin d'étude en **Éducation Spécialisée**, il répond aux besoins de fluidification du partage d'informations prôné par l'ARS.
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+---
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png" width="830" height="466">
-  </picture>
-</a>
+## Expertise Métier & Vision Sociale
+L'application ne se contente pas de stocker des données ; elle est conçue à partir des réalités du terrain :
+* **Décloisonnement** : Briser les silos entre les domaines éducatif, administratif et de santé.
+* **Accessibilité** : Mise en avant immédiate des supports de communication de l'usager (MAKATON, Pictogrammes).
+* **Interopérabilité** : Structure de données alignée sur le standard international **HL7 FHIR R4**, garantissant une compatibilité avec les futurs écosystèmes de santé.
+* **Éthique** : Un module de gestion des partages qui place le consentement et la traçabilité au centre de l'accompagnement.
 
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
+---
 
-## Quick Start
+## Stack Technique
+Le projet utilise une architecture moderne "Fullstack" pour garantir performance et réactivité :
 
-```bash [Terminal]
-npm create nuxt@latest -- -t github:nuxt-ui-templates/starter
-```
+* **Frontend** : [Nuxt 3](https://nuxt.com/) & [Nuxt UI](https://ui.nuxt.com/) (Tailwind CSS + Headless UI).
+* **State Management** : [Pinia](https://pinia.vuejs.org/) 
+* **Backend & Auth** : [Supabase](https://supabase.com/) (PostgreSQL) pour la persistance et la sécurité des données.
+* **Démonstration** : Intégration d'un **Mock JSON** complet pour simuler un dossier usager riche (Parcours de vie, santé, identité) sans dépendre immédiatement d'une API externe.
 
-## Deploy your own
+---
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
+## Fonctionnalités Clés
+- **Timeline "Fil de Vie"** : Chronologie interactive des événements avec filtrage dynamique par catégorie (Santé, Éducatif, Administratif).
+- **Profil Interopérable** : Cartes d'identité FHIR-compliant (Allergies, Handicaps, Régimes alimentaires).
+- **Dashboard de Partage** : Gestion fine des permissions par professionnel et historique des accès.
+- **UI Générique** : Système de composants modulaires et réutilisables (AppCard, Badges dynamiques).
 
-## Setup
+---
 
-Make sure to install the dependencies:
-
-```bash
-pnpm install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Installation et Développement Local
 
 ```bash
-pnpm dev
-```
+# 1. Cloner le projet
+git clone https://github.com/Hippalien/Dossier-Transversal-Medico-Social.git
 
-## Production
+# 2. Installer les dépendances
+npm install
 
-Build the application for production:
+# 3. Configurer les variables d'environnement (.env)
+# SUPABASE_URL=votre_url //à venir
+# SUPABASE_KEY=votre_clef //à venir
 
-```bash
-pnpm build
-```
-
-Locally preview production build:
-
-```bash
-pnpm preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+# 4. Lancer le projet
+npm run dev
