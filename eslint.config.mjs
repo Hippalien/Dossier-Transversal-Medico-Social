@@ -13,4 +13,9 @@ export default withNuxt(
       quotes: 'single',
     },
   }),
+  {
+    rules: {
+      'vue/attribute-hyphenation': 'off',
+    },
+  },
 )

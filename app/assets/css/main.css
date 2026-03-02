@@ -1,14 +1,17 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
-
+ 
 @theme {
-  --color-famille-500: #D946EF;
-  --color-famille-600: #C026D3;
-  
-  --color-sante-500: #F43F5E;
-  --color-admin-500: #3B82F6;
-  --color-educ-500: #10B981;
-  --color-fuchsia-500: #D946EF;
+  --animate-fade-in-up: fadeInUp 0.4s ease-out forwards;
+}
 
-  --font-sans: 'Public Sans', sans-serif;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

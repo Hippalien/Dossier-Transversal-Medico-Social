@@ -353,9 +353,9 @@
       "dateFin": null,
       "niveauAcces": "Complet",
       "permissions": [
-        "lecture",
-        "ecriture",
-        "ajoutDocument"
+        "Lecture",
+        "Écriture",
+        "Ajout documents"
       ]
     },
     {
@@ -367,7 +367,7 @@
       "dateFin": null,
       "niveauAcces": "Partiel",
       "permissions": [
-        "lecture"
+        "Lecture"
       ]
     },
     {
@@ -379,7 +379,7 @@
       "dateFin": null,
       "niveauAcces": "Santé uniquement",
       "permissions": [
-        "lecture"
+        "Lecture"
       ]
     }
   ],
