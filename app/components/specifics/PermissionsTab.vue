@@ -47,7 +47,26 @@ const statCardsPermissions = computed<StatElement[]>(() => {
         :item="card"
       />
     </div>
-    <ActiveShareCard />
+    <div class="flex flex-col gap-4">
+      <ActiveShareCard />
+      <OldShareCard />
+      <AppCardInformation
+        title="Protection des données (RGPD)"
+      >
+        <template #icon>
+          <UIcon name="i-heroicons-shield-exclamation-solid" class="w-5 h-5 text-blue-500" />
+        </template>
+
+        <div class="flex flex-col gap-3 text-sm text-blue-700 font-semibold">
+          <p>
+            Le partage du dossier est strictement encadré par le RGPD. Chaque professionnel accède uniquement aux informations nécessaires à l'accompagnement. L'usager garde le contrôle total et peut révoquer un accès à tout moment.
+          </p>
+          <p class="flex text-xs text-center gap-2 font-thin items-center">
+            • Traçabilité complète des accès • Durées limitées • Consentement révocable • Anonymisation possible
+          </p>
+        </div>
+      </AppCardInformation>
+    </div>
 
     <UModal v-model:open="showAccessForm">
       <template #content>

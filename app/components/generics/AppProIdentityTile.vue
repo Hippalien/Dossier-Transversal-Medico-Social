@@ -4,10 +4,12 @@ import { BuildingOffice2Icon, CalendarDaysIcon, EnvelopeIcon, EyeIcon, PencilSqu
 const _props = defineProps<{
   professionnel: string
   structure: string
-  email: string
+  email?: string
   dateDebut: string
+  dateFin?: string
   niveauAcces: string
-  permissions: string[]
+  permissions?: string[]
+  historique?: boolean
 }>()
 
 const emit = defineEmits(['voir', 'modifier', 'révoquer'])
@@ -31,17 +33,21 @@ const buttons = [
     <div class="flex flex-col gap-4">
       <span class="flex gap-2 items-center">
         <p class="text-lg font-bold text-black">{{ professionnel }}</p>
-        <p class="rounded-lg px-2 py-0.5 text-xs font-semibold" :class="niveauAccesBadge[niveauAcces] ?? 'bg-gray-100 text-gray-700 border border-gray-200'">{{ niveauAcces }}</p>
+        <p class="rounded-lg px-2 py-0.5 text-xs font-semibold" :class="historique ? 'bg-gray-100 text-gray-700 border border-gray-200' : (niveauAccesBadge[niveauAcces] ?? 'bg-gray-100 text-gray-700 border border-gray-200')">{{ niveauAcces }}</p>
       </span>
 
-      <div class="flex flex-col gap-2">
+      <p v-if="historique" class="text-gray-500 text-sm">
+        {{ structure }}
+      </p>
+
+      <div v-else class="flex flex-col gap-2">
         <div class="flex gap-2 items-center">
           <BuildingOffice2Icon class="w-4 h-4 text-gray-600" />
           <p class="text-gray-600 text-sm">
             {{ structure }}
           </p>
         </div>
-        <div class="flex gap-2 items-center">
+        <div v-if="email" class="flex gap-2 items-center">
           <EnvelopeIcon class="w-4 h-4 text-gray-600" />
           <p class="text-gray-600 text-sm">
             {{ email }}
@@ -61,7 +67,12 @@ const buttons = [
       </div>
     </div>
 
-    <div class="flex flex-col gap-2 justify-center w-36">
+    <div v-if="historique" class="flex flex-col gap-1 justify-center text-right text-sm text-gray-500">
+      <p>Du {{ dateDebut }}</p>
+      <p v-if="dateFin">Au {{ dateFin }}</p>
+    </div>
+
+    <div v-else class="flex flex-col gap-2 justify-center w-36">
       <AppButton v-for="button in buttons" :key="button.event" :class="button.class" class="w-full justify-center" @click="emit(button.event)">
         <component :is="button.icon" class="w-4 h-4" />
         {{ button.label }}
