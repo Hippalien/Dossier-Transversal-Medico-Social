@@ -43,9 +43,5 @@ git clone https://github.com/Hippalien/Dossier-Transversal-Medico-Social.git
 # 2. Installer les dépendances
 npm install
 
-# 3. Configurer les variables d'environnement (.env)
-# SUPABASE_URL=votre_url //à venir
-# SUPABASE_KEY=votre_clef //à venir
-
-# 4. Lancer le projet
+# 3. Lancer le projet
 npm run dev
