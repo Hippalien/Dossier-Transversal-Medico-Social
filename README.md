@@ -21,7 +21,6 @@ Le projet utilise une architecture moderne "Fullstack" pour garantir performance
 
 * **Frontend** : [Nuxt 3](https://nuxt.com/) & [Nuxt UI](https://ui.nuxt.com/) (Tailwind CSS + Headless UI).
 * **State Management** : [Pinia](https://pinia.vuejs.org/) 
-* **Backend & Auth** : [Supabase](https://supabase.com/) (PostgreSQL) pour la persistance et la sécurité des données.
 * **Démonstration** : Intégration d'un **Mock JSON** complet pour simuler un dossier usager riche (Parcours de vie, santé, identité) sans dépendre immédiatement d'une API externe.
 
 ---
